@@ -28,3 +28,10 @@ bash <(curl -sL https://gh-proxy.com/https://raw.githubusercontent.com/faker2048
 cd /root/singbox
 ./create_initd.sh
 ```
+
+## 环境变量
+
+可选创建 `/etc/sing-box/run_env` 文件设置环境变量：
+```
+ENABLE_DEPRECATED_SPECIAL_OUTBOUNDS=true
+```

@@ -12,6 +12,14 @@ start_service() {
     procd_open_instance
     procd_set_param command /usr/bin/sing-box run -c /etc/sing-box/config.json
     procd_set_param respawn
+    
+    # 加载环境变量文件
+    if [ -f /etc/sing-box/run_env ]; then
+        while IFS='=' read -r key value; do
+            [ -n "$key" ] && [ -n "$value" ] && procd_set_param env "$key=$value"
+        done < /etc/sing-box/run_env
+    fi
+    
     procd_close_instance
 }
 
