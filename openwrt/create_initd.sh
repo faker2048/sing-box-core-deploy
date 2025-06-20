@@ -10,8 +10,6 @@ STOP=10
 
 start_service() {
     procd_open_instance
-    procd_set_param command /usr/bin/sing-box run -c /etc/sing-box/config.json
-    procd_set_param respawn
     
     # 加载环境变量文件
     if [ -f /etc/sing-box/run_env ]; then
@@ -20,6 +18,8 @@ start_service() {
         done < /etc/sing-box/run_env
     fi
     
+    procd_set_param command /usr/bin/sing-box run -c /etc/sing-box/config.json
+    procd_set_param respawn
     procd_close_instance
 }
 
