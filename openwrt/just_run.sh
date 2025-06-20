@@ -1,0 +1,1 @@
+/usr/bin/sing-box run -c /etc/sing-box/config.json
