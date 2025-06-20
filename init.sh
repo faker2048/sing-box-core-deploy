@@ -17,7 +17,7 @@ SCRIPTS=(
 
 for script in "${SCRIPTS[@]}"; do
     filename=$(basename "$script")
-    curl -sL "https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/sing-box-core-deploy/refs/heads/main/$script" -o "/root/singbox/$filename"
+    curl -sL "https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/sing-box-core-deploy/refs/heads/master/$script" -o "/root/singbox/$filename"
 done
 
 chmod +x /root/singbox/*.sh

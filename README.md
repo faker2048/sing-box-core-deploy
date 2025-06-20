@@ -11,10 +11,10 @@
 
 ```bash
 # 标准安装
-bash <(curl -sL https://raw.githubusercontent.com/faker2048/sing-box-core-deploy/refs/heads/main/init.sh)
+bash <(curl -sL https://raw.githubusercontent.com/faker2048/sing-box-core-deploy/refs/heads/master/init.sh)
 
 # 镜像加速
-bash <(curl -sL https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/sing-box-core-deploy/refs/heads/main/init.sh)
+bash <(curl -sL https://gh-proxy.com/https://raw.githubusercontent.com/faker2048/sing-box-core-deploy/refs/heads/master/init.sh)
 ```
 
 ## 使用说明
